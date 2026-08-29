@@ -193,3 +193,27 @@ function groupAnagrams(strs) {
 
 
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+function lengthOfLongestSubstring(s) {
+    let result = "";
+    let max = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        if (result.includes(s[i])) {
+            result = result.slice(result.indexOf(s[i]) + 1);
+        }
+
+        result += s[i];
+
+        if (result.length > max) {
+            max = result.length;
+        }
+    }
+
+    return max;
+}
+
+console.log(lengthOfLongestSubstring("abcabcbb")); // 3
