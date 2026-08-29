@@ -216,4 +216,19 @@ function lengthOfLongestSubstring(s) {
     return max;
 }
 
-console.log(lengthOfLongestSubstring("abcabcbb")); // 3
+// console.log(lengthOfLongestSubstring("abcabcbb"));
+
+
+
+
+
+
+
+
+/**
+ * @param {Object} obj
+ * @return {Object}
+ */
+function deepClone(obj){
+
+}
