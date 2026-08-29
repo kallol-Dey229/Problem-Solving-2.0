@@ -231,4 +231,19 @@ function lengthOfLongestSubstring(s) {
  */
 function deepClone(obj){
 
+    if(obj === null || typeof obj !== "object"){
+        return obj;
+    }
+
+
+    const clone = {};
+
+    for(let key in obj){
+        clone[key] = deepClone(obj[key]);
+    }
+
+    return clone;
 }
+
+
+console.log(deepClone({ a: 1, b: { c: 2 } }))
