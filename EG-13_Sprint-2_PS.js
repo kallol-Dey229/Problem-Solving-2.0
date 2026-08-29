@@ -122,7 +122,7 @@ function twoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] + nums[j] === target) {
-                array.push(i,j)
+                array.push(i, j)
                 return array
             }
         }
@@ -130,4 +130,32 @@ function twoSum(nums, target) {
 
 }
 
-console.log(twoSum([2, 7, 11, 15], 9))
+// console.log(twoSum([2, 7, 11, 15], 9))
+
+
+
+
+
+
+
+/**
+ * @param {Array} arr
+ * @return {Array}
+ */
+function flattenArray(arr) {
+
+    const array = []
+    for (let i = 0; i < arr.length; i++) {
+       if(Array.isArray(arr[i])){
+        array.push(...flattenArray(arr[i]))
+       }else{
+        array.push(arr[i])
+       }
+    }
+
+    return array
+
+}
+
+
+// console.log(flattenArray([1, [2, [3, 4], 5]]));
