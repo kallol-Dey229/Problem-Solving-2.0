@@ -58,4 +58,4 @@ function isPalindrome(str) {
 }
 
 
-console.log(isPalindrome("adkmkdm"));
+console.log(isPalindrome("racecar"));
