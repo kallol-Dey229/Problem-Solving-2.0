@@ -72,11 +72,34 @@ function isPalindrome(str) {
  * @return {number}
  */
 function sumArray(nums) {
-    let sum=0;
+    let sum = 0;
     for (let i = 0; i < nums.length; i++) {
-        sum=nums[i] + sum;
+        sum = nums[i] + sum;
     }
     return sum;
 }
 
-console.log(sumArray([5,5,10,30]))
+// console.log(sumArray([5,5,10,30]))
+
+
+
+
+
+
+
+/**
+ * @param {string} str
+ * @return {number}
+ */
+function countVowels(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+// console.log(countVowels("javascript"))
