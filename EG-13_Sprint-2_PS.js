@@ -58,4 +58,25 @@ function isPalindrome(str) {
 }
 
 
-console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("racecar"));
+
+
+
+
+
+
+
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+function sumArray(nums) {
+    let sum=0;
+    for (let i = 0; i < nums.length; i++) {
+        sum=nums[i] + sum;
+    }
+    return sum;
+}
+
+console.log(sumArray([5,5,10,30]))
