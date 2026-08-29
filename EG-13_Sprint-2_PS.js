@@ -146,11 +146,11 @@ function flattenArray(arr) {
 
     const array = []
     for (let i = 0; i < arr.length; i++) {
-       if(Array.isArray(arr[i])){
-        array.push(...flattenArray(arr[i]))
-       }else{
-        array.push(arr[i])
-       }
+        if (Array.isArray(arr[i])) {
+            array.push(...flattenArray(arr[i]))
+        } else {
+            array.push(arr[i])
+        }
     }
 
     return array
@@ -159,3 +159,37 @@ function flattenArray(arr) {
 
 
 // console.log(flattenArray([1, [2, [3, 4], 5]]));
+
+
+
+
+
+
+
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+function groupAnagrams(strs) {
+    let groups = {};
+
+    for (let word of strs) {
+        let key = word.split("").sort().join("");
+
+        if (!groups[key]) {
+            groups[key] = [];
+        }
+
+        groups[key].push(word);
+    }
+
+    return Object.values(groups);
+}
+
+// console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+
+
+
+
+
